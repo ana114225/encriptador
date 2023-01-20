@@ -1,0 +1,122 @@
+body
+{
+	font-family: 'Inter', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: #efefef;
+	width: 900px;
+	margin: 0 auto;
+}
+.areaFrase
+{
+	float: left;
+	width: 600px;
+}
+.cajaFrase
+{
+	width: 600px;
+	height: 350px;
+}
+.logoAlura
+{
+	position: absolute;
+	top: 3px;
+}
+#textoFrase
+{
+	width: 55%;
+	height: 260px;
+	background: none;
+	padding: 20px 20px;
+	margin: 3% 20% 3% 20%;
+	border: none;
+	border-radius: 15px;
+	resize: none;
+}
+.cajaFrase p
+{
+	font-size: 14px;
+	position: absolute;
+	top: 325px;
+	left: 25%;
+}
+.cajaBotones
+{
+	width: 580px;
+	height: 20px;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+}
+#encriptar, #desencriptar, #copiar
+{
+	width: 100px;
+	height: 25px;
+	font-family: 'Inter', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 12px;
+	margin: 0px 5% 0px 5%;
+	border-radius: 10px;
+}
+#encriptar
+{
+	background: #0a3871;
+	border: 1px solid #d8dfe8;
+	color: #d8dfe8;
+}
+#desencriptar
+{
+	background: #d8dfe8;
+	border: 1px solid #0a3871;
+	color: #0a3871;
+}
+#encriptar:hover, #desencriptar:hover, #copiar:hover
+{
+	font-size: 13px;
+}
+.areaResultado
+{
+	float: right;
+	width: 300px;
+}
+.cajaResultado
+{
+	height: 330px;
+	width: 280px;
+	background-color: #ffffff;
+	border-radius: 15px;
+	margin: 10px 10px 10px 10px;
+}
+#textoResultado
+{
+	width: 90%;
+	height: 300px;
+	margin: 5% 5% 5% 5%;
+	border: none;
+	resize: none;
+	display: none;
+}
+#imagen-munheco
+{
+	width: 80%;
+	margin: 10% 10% 0px 10%;
+}
+.cajaBoton
+{
+	width: 280px;
+	height: 20px;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+}
+#copiar
+{
+	background: #0a3871;
+	border: 1px solid #d8dfe8;
+	color: #d8dfe8;
+	display: none;
+}
+footer
+{
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding: 10px 0px 10px 0px;
+}

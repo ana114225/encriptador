@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Encriptador</title>
+        <link rel="shortcut icon" href="Logo.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <div class="areaFrase">
+                <div class="cajaFrase">
+                    <img src="Frame 6.png" class="logoAlura" alt="Logo Alura Latam">
+                    <textarea id="textoFrase"></textarea>
+                    <p>Incluir solo palabras minusculas y sin caracteres especiales</p>
+                </div>
+                <div class="cajaBotones">
+                    <button id="encriptar">Encriptar</button>
+                    <button id="desencriptar">Desencriptar</button>
+                </div>
+            </div>
+            <div class="areaResultado">
+                <div class="cajaResultado">
+                    <textarea id="textoResultado"></textarea>
+                    <img src="Muñeco.png" id="imagen-munheco">
+                </div>
+                <div class="cajaBoton">
+                    <button id="copiar">Copiar</button>
+                </div>
+            </div>
+        </main>
+        <footer>Ana Hernandez - Alura Latam</footer>
+    </body>
+</html>
+<script>
+    var encriptar = document.querySelector("#encriptar");
+    var desencriptar = document.querySelector("#desencriptar");
+    var texto = document.querySelector("#textoFrase");
+    var copiar = document.querySelector("#copiar");
+    texto.focus();
+    function mostrar(imprimir)
+    {
+        var textoEncriptado  = imprimir;
+        document.getElementById("textoResultado").innerHTML=textoEncriptado;
+    }
+    function encriptadora()
+    {
+        var frase = texto.value;
+        frase = frase.replace(/e/gim,"enter");
+        frase = frase.replace(/i/gim,"imes");
+        frase = frase.replace(/a/gim,"ai");
+        frase = frase.replace(/o/gim,"ober");
+        frase = frase.replace(/u/gim,"ufat");
+        document.getElementById("copiar").style.display="inline";
+        document.getElementById("textoResultado").style.display="inline";
+        document.getElementById("imagen-munheco").style.display="none";
+        mostrar(frase);
+    }
+    function desencriptadora()
+    {
+        var frase = texto.value;
+        frase = frase.replace(/enter/gim,"e");
+        frase = frase.replace(/imes/gim,"i");
+        frase = frase.replace(/ai/gim,"a");
+        frase = frase.replace(/ober/gim,"o");
+        frase = frase.replace(/ufat/gim,"u");
+        document.getElementById("copiar").style.display="inline";
+        document.getElementById("textoResultado").style.display="inline";
+        document.getElementById("imagen-munheco").style.display="none";
+        mostrar(frase);
+    }
+    function copia()
+    {
+        var textocopiado = document.getElementById("textoResultado");
+        textocopiado.select();
+        document.execCommand("copy");
+        document.getElementById("textoResultado").style.display="none";
+        document.getElementById("imagen-munheco").style.display="inline";
+        document.getElementById("copiar").style.display="none";
+        document.getElementById("textoFrase").value="";
+        texto.focus();
+    }
+    encriptar.onclick = encriptadora;
+    desencriptar.onclick = desencriptadora;
+    copiar.onclick = copia;
+</script>
